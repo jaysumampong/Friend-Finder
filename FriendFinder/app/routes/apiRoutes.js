@@ -10,7 +10,18 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(req, res) {
         console.log(req.body.scores);
+        let user = req.body;
+        for (let i = 0; i < user.scores.length; i++) {
+            user.scores[i] = parseInt(user.scores[i]);
         }
+        let friendScore = 0;
+        let minScore = 0;
+        
+
+
+        }
+
+
 
     );
 }
