@@ -16,12 +16,22 @@ module.exports = function(app) {
         }
         let friendScore = 0;
         let minScore = 0;
-        
 
-
+        for (let i = 0; i < friends[i].scores.length; x++) {
+            let total = 0;
+            for (var x = 0; j < friends.[i].scores.length; x++) {
+                let diff = Math.abs(user.scores[j] - friends[i].scores[j]);
+                total += diff;   
+            }
+            
+            if (total < minScore) {
+                friendScore = i;
+                minScore = total;
+            }
         }
 
-
-
-    );
-}
+        friends.push(user);
+        res.json(friends[friendScore]);
+        
+    });
+};
