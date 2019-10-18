@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>John Finder</title>
@@ -27,7 +29,7 @@
 
             <div class="form-group">
                 <label for="question 1">I like to get straight into the action</label>
-                <select name="" id="question-1">
+                <select class="form-control" id="question-1">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -39,7 +41,7 @@
 
             <div class="form-group">
                 <label for="question 2">Music is life</label>
-                <select name="" id="question-2">
+                <select class="form-control" id="question-2">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -50,7 +52,7 @@
 
             <div class="form-group">
                 <label for="question 3">Often times I find myself daydreaming</label>
-                <select name="" id="question-3">
+                <select class="form-control" id="question-3">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -62,7 +64,7 @@
 
             <div class="form-group">
                 <label for="question 4">I work out</label>
-                <select name="" id="question-4">
+                <select class="form-control" id="question-4">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -74,7 +76,7 @@
 
             <div class="form-group">
                 <label for="question 5">I enjoy movies</label>
-                <select name="" id="question-5">
+                <select class="form-control" id="question-5">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -84,8 +86,8 @@
             </div>
 
             <div class="form-group">
-                <label for="question "6>I enjoy public speaking</label>
-                <select name="" id="question-6">
+                <label for="question " 6>I enjoy public speaking</label>
+                <select class="form-control" id="question-6">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -97,7 +99,7 @@
 
             <div class="form-group">
                 <label for="question 7">I often go to concerts</label>
-                <select name="" id="question-7">
+                <select class="form-control" id="question-7">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -109,7 +111,7 @@
 
             <div class="form-group">
                 <label for="question 8">Violence is not an answer</label>
-                <select name="" id="question-8">
+                <select class="form-control" id="question-8">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -121,7 +123,7 @@
 
             <div class="form-group">
                 <label for="question 9">I like to cook</label>
-                <select name="" id="question-9">
+                <select class="form-control" id="question-9">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -133,7 +135,7 @@
 
             <div class="form-group">
                 <label for="question 10">I am a hipster</label>
-                <select name="" id="question-10">
+                <select class="form-control" id="question-10">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -148,28 +150,28 @@
         </div>
 
         <div id="best-friend-modal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h3 class="modal-title">The Right John For You</h1>
-                        </div>
+            <div class="modal-dialog">
 
-                        <div class="modal-body">
-                            <h2 id="best-friend"></h2>
-                            <img id="best-friend-photo" src="#">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">The Right John For You</h1>
+                    </div>
+
+                    <div class="modal-body">
+                        <h2 id="best-friend"></h2>
+                        <img id="best-friend-photo" src="#">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
+        </div>
 
     </div>
 
-    
+
 
     <footer>
         <div class="container">
@@ -177,9 +179,6 @@
         </div>
     </footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>
@@ -192,11 +191,11 @@
         if ($("friend-name").val() === "" || $("#profile-photo").val() === "") {
             valid = false;
 
-        } else if ($("#question-1").val() === "empty" || $("#question-2").val() === "empty" 
-        || $("#question-3").val() === "empty" || $("#question-4").val() === "empty" 
-        || $("#question-5").val() === "empty" || $("#question-6").val() === "empty" 
-        || $("#question-7").val() === "empty" || $("#question-8").val() === "empty" 
-        || $("#question-9").val() === "empty" || $("#question-10").val() === "empty") {
+        } else if ($("#question-1").val() === "empty" || $("#question-2").val() === "empty"
+            || $("#question-3").val() === "empty" || $("#question-4").val() === "empty"
+            || $("#question-5").val() === "empty" || $("#question-6").val() === "empty"
+            || $("#question-7").val() === "empty" || $("#question-8").val() === "empty"
+            || $("#question-9").val() === "empty" || $("#question-10").val() === "empty") {
             valid = false;
         }
         if (valid === true) {
@@ -226,7 +225,6 @@
                 $("#best-friend-modal").modal("toggle");
             });
         } else {
-
             alert("Survey is incomplete!");
         }
     });
