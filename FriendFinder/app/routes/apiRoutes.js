@@ -17,10 +17,10 @@ module.exports = function(app) {
         let friendScore = 0;
         let minScore = 0;
 
-        for (let i = 0; i < friends[i].scores.length; x++) {
+        for (let i = 0; i < friends.length; i++) {
             let total = 0;
-            for (var x = 0; j < friends[i].scores.length; x++) {
-                let diff = Math.abs(user.scores[j] - friends[i].scores[j]);
+            for (var x = 0; x < friends[i].scores.length; x++) {
+                let diff = Math.abs(user.scores[x] - friends[i].scores[x]);
                 total += diff;   
             }
             
