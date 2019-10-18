@@ -218,7 +218,8 @@
             };
 
             let currentURL = window.location.origin;
-
+            
+// having trouble figuring out why modal doesnt work
             $.post(currentURL + "/api/friends", newUser, function (data) {
                 $("#best-friend").text(data.name);
                 $("#best-friend-photo").attr("src", data.photo);
