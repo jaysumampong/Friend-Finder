@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>John Finder</title>
@@ -146,10 +144,10 @@
             </div>
         </form>
         <div>
-            <button id="submit-button" class="btn-primary" type="submit"></button>
+            <button id="submit-button" data-toggle="modal" data-target="#best-john-modal" class="btn-primary" type="submit"></button>
         </div>
 
-        <div id="best-friend-modal" class="modal fade" role="dialog">
+        <div id="best-john-modal" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <div class="modal-content">
@@ -159,8 +157,8 @@
                     </div>
 
                     <div class="modal-body">
-                        <h2 id="best-friend"></h2>
-                        <img id="best-friend-photo" src="#">
+                        <h2 id="best-john"></h2>
+                        <img id="best-john-photo" src="#">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -178,6 +176,10 @@
             <a href="/api/friends"></a>
         </div>
     </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 
@@ -218,12 +220,13 @@
             };
 
             let currentURL = window.location.origin;
-            
-// having trouble figuring out why modal doesnt work
+
+            // having trouble figuring out why modal doesnt work
             $.post(currentURL + "/api/friends", newUser, function (data) {
-                $("#best-friend").text(data.name);
-                $("#best-friend-photo").attr("src", data.photo);
-                $("#best-friend-modal").modal("toggle");
+                $("#best-john").text(data.name);
+                $("#best-john-photo").attr("src", data.photo);
+                $("#best-john-modal").modal("toggle");
+                console.log("working");
             });
         } else {
             alert("Survey is incomplete!");
